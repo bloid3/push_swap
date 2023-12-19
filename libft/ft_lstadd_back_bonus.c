@@ -1,25 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   push_swap.h                                        :+:      :+:    :+:   */
+/*   ft_lstadd_back.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
+/*   By: papereir <papereir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/10/21 13:01:46 by marvin            #+#    #+#             */
-/*   Updated: 2023/12/19 12:55:01 by marvin           ###   ########.fr       */
+/*   Created: 2022/10/12 11:24:24 by papereir          #+#    #+#             */
+/*   Updated: 2022/10/12 11:30:08 by papereir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "libft.h"
 
-#ifndef PUSH_SWAP_H
-# define PUSH_SWAP_H
-# include <unistd.h>
-# include <stdlib.h>
-# include <fcntl.h>
-# include <sys/types.h>
-# include "libft/libft.h"
+void	ft_lstadd_back(t_list **lst, t_list *new)
+{
+	t_list	*temporal;
 
-
-void	ft_print(char *s, int opt, char ab);
-
-#endif
+	temporal = ft_lstlast(*lst);
+	if (*lst == NULL)
+		*lst = new;
+	else
+		temporal->next = new;
+}

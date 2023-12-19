@@ -1,24 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   ft_strdup.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
+/*   By: papereir <papereir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/10/21 12:58:34 by marvin            #+#    #+#             */
-/*   Updated: 2023/12/19 12:55:32 by marvin           ###   ########.fr       */
+/*   Created: 2022/09/21 17:37:52 by papereir          #+#    #+#             */
+/*   Updated: 2022/09/22 16:26:50 by papereir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
+#include "libft.h"
 
-int	main(int argc, char **argv)
+char	*ft_strdup(const char	*s1)
 {
-	t_list	**stack_a;
-	t_list	**stack_b;
+	char	*aux;
+	size_t	i;
 
-	if (!argv)
-		ft_print("WRONG ARGUMENTS \n", 1, 'x');
-		return (-1);
-	
+	i = 0;
+	aux = ft_calloc(sizeof(char) * ft_strlen(s1) + 1, 1);
+	if (aux == NULL)
+	{
+		return (NULL);
+	}
+	while (s1[i])
+	{
+		aux[i] = s1[i];
+		i++;
+	}
+	return (aux);
 }
