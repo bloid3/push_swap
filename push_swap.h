@@ -6,7 +6,7 @@
 /*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/21 13:01:46 by marvin            #+#    #+#             */
-/*   Updated: 2023/12/19 12:55:01 by marvin           ###   ########.fr       */
+/*   Updated: 2023/12/19 13:45:09 by marvin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,5 +21,15 @@
 
 
 void	ft_print(char *s, int opt, char ab);
+void	onlynum(char **n);
+void	isempty(char *s);
+t_list	*makelist(int argc, char *argv[]);
+int		checknums(char *s);
+t_list	*makeauxlist(int argc, char *argv[], t_list *stacka);
+void	checkall(t_list *aux);
+int		ft_isnumber(char *str);
+void	repeated(t_list *aux);
+int		isinorder(t_list *aux);
+void	sortsmol(t_list **stackA, t_list **stackB);
 
 #endif
