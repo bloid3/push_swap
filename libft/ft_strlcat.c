@@ -6,7 +6,7 @@
 /*   By: papereir <papereir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/01 12:49:26 by papereir          #+#    #+#             */
-/*   Updated: 2022/10/12 13:20:24 by papereir         ###   ########.fr       */
+/*   Updated: 2023/12/21 14:59:16 by papereir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,7 @@ size_t	ft_strlcat(char *dest, const char *src, size_t dstsize)
 		while (src[contador] && contador + j < dstsize - 1)
 		{
 			dest[j + contador] = src[contador];
-		contador++;
+			contador++;
 		}
 	}
 	dest[j + contador] = '\0';

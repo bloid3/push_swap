@@ -6,7 +6,7 @@
 /*   By: papereir <papereir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/01 12:55:46 by papereir          #+#    #+#             */
-/*   Updated: 2023/12/21 13:11:52 by papereir         ###   ########.fr       */
+/*   Updated: 2023/12/21 15:00:16 by papereir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,18 +54,18 @@ void	ft_putnbr_fd(int n, int fd);
 void	ft_putendl_fd(char	*s, int fd);
 typedef struct s_list
 {
-	int				*content;
-	int				*idx;
+	int				content;
+	int				idx;
 	struct s_list	*next;
-}					t_list;
-void	ft_lstadd_back(t_list	**lst, t_list 	*new);
+}	t_list;
+void	ft_lstadd_back(t_list **lst, t_list *new);
 void	ft_lstadd_front(t_list	**lst, t_list	*new);
-void	ft_lstclear(t_list	**lst, void (*del)(void *));
-void	ft_lstdelone(t_list	*lst, void (*del)(void *));
+void	ft_lstclear(t_list	**lst);
+void	ft_lstdelone(t_list	*lst);
 t_list	*ft_lstlast(t_list	*lst);
-t_list	*ft_lstnew(void	*content);
+t_list	*ft_lstnew(int content);
 int		ft_lstsize(t_list	*lst);
-void	ft_lstiter(t_list	*lst, void (*f)(void *));
+void	ft_lstiter(t_list *lst);
 t_list	*ft_lstmap(t_list	*lst, void *(*f)(void *), void (*del)(void *));
 
 #endif

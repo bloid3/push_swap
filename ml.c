@@ -21,9 +21,9 @@ t_list	*makeauxlist(int argc, char *argv[], t_list *stacka)
 	while (i <= argc - 1)
 	{
 		if (checknums(argv[i]) == 0)
-			display("ONLY NUMS PLEASE\n", 1, 'x');
+			ft_print("ONLY NUMS PLEASE\n", 1, 'x');
 		if (ft_atoi(argv[i]) > INT_MAX || ft_strlen(argv[i]) > 11)
-			display("ONLY NUMS PLEASE\n", 1, 'x');
+			ft_print("ONLY NUMS PLEASE\n", 1, 'x');
 		num = ft_atoi(argv[i]);
 		ft_lstadd_back(&stacka, ft_lstnew(num));
 		i++;
@@ -45,7 +45,7 @@ void	isempty(char *s)
 		j++;
 	}
 	if (i != 0)
-		return;
+		return ;
 	else
 		ft_print("ONLY NUMS PLEASE\n", 1, 'x');
 }
@@ -55,7 +55,7 @@ t_list	*makelist(int argc, char *argv[])
 	t_list	*stack_a;
 	int		i;
 	int		num;
-	char	*nums;
+	char	**nums;
 
 	stack_a = NULL;
 	i = 1;

@@ -16,6 +16,7 @@ void	ft_print(char *s, int opt, char ab)
 {
 	int	len;
 
+	len = ft_strlen(s);
 	if (opt == 1)
 	{
 		write(1, "ERROR ", 6);

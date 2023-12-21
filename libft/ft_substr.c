@@ -6,7 +6,7 @@
 /*   By: papereir <papereir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/06 12:33:52 by papereir          #+#    #+#             */
-/*   Updated: 2022/09/21 17:35:15 by papereir         ###   ########.fr       */
+/*   Updated: 2023/12/21 14:59:52 by papereir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,8 +34,8 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	while (j < len)
 	{
 		sub[j] = s[start];
-			j++;
-			start++;
+		j++;
+		start++;
 	}
 	sub[j] = '\0';
 	return (sub);

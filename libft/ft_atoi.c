@@ -6,7 +6,7 @@
 /*   By: papereir <papereir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/01 18:00:35 by papereir          #+#    #+#             */
-/*   Updated: 2022/10/12 13:15:31 by papereir         ###   ########.fr       */
+/*   Updated: 2023/12/21 14:58:26 by papereir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ int	ft_atoi(const char *str)
 	sign = 1;
 	numero = 0;
 	while (str[c] == 32 || (str[c] >= 9 && str[c] <= 13))
-			c++;
+		c++;
 	if (str[c] == '-' || str[c] == '+')
 	{
 		if (str[c] == '-')

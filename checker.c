@@ -43,8 +43,6 @@ void	repeated(t_list *aux)
 	}
 }
 
-
-
 void	onlynum(char **n)
 {
 	int	i;
@@ -60,7 +58,7 @@ void	onlynum(char **n)
 				|| ft_strlen(n[i]) > 11)
 			{
 				ft_free(n);
-				display(" ONLY N PLEASE\n", 1, 'x');
+				ft_print(" ONLY N PLEASE\n", 1, 'x');
 			}
 			j++;
 		}
