@@ -22,8 +22,10 @@ t_list	*makeauxlist(int argc, char *argv[], t_list *stacka)
 	{
 		if (checknums(argv[i]) == 0)
 			ft_print("ONLY NUMS PLEASE\n", 1, 'x');
-		if (ft_atoi(argv[i]) > INT_MAX || ft_strlen(argv[i]) > 11)
-			ft_print("ONLY NUMS PLEASE\n", 1, 'x');
+		if (ft_atoi_long(argv[i]) > INT_MAX
+			|| ft_strlen(argv[i]) > 11
+			|| ft_atoi_long(argv[i]) < INT_MIN)
+			ft_print("INT TOO BIG OR TOO SHORT\n", 1, 'x');
 		num = ft_atoi(argv[i]);
 		ft_lstadd_back(&stacka, ft_lstnew(num));
 		i++;

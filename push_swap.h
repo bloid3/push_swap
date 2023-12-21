@@ -6,7 +6,7 @@
 /*   By: papereir <papereir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/21 13:01:46 by marvin            #+#    #+#             */
-/*   Updated: 2023/12/21 15:04:03 by papereir         ###   ########.fr       */
+/*   Updated: 2023/12/21 16:47:47 by papereir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,5 +46,6 @@ void	sortsmol4(t_list **stackA, t_list **stackB);
 void	sortsmol5(t_list **stackA, t_list **stackB);
 int		bit_size(int lstsize);
 void	radix(t_list **stacka, t_list **stackb);
+void	ft_intsize(t_list *stack_a);
 
 #endif

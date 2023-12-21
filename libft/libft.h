@@ -6,7 +6,7 @@
 /*   By: papereir <papereir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/01 12:55:46 by papereir          #+#    #+#             */
-/*   Updated: 2023/12/21 15:00:16 by papereir         ###   ########.fr       */
+/*   Updated: 2023/12/21 17:19:08 by papereir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,7 @@
 # include <unistd.h>
 
 char	*ft_strdup(const char	*s1);
+long	ft_atoi_long(const char *str);
 int		ft_atoi(const char	*str);
 void	ft_bzero(void	*s, size_t n);
 int		ft_isalnum(int c);

@@ -54,7 +54,7 @@ void	onlynum(char **n)
 		j = 0;
 		while (n[i][j])
 		{
-			if (ft_atoi(n[i]) > INT_MAX || (ft_isnumber(n[i])) == 0
+			if (ft_atoi_long(n[i]) > INT_MAX || (ft_isnumber(n[i])) == 0
 				|| ft_strlen(n[i]) > 11)
 			{
 				ft_free(n);
@@ -82,5 +82,8 @@ void	checkall(t_list *aux)
 {
 	repeated(aux);
 	if (isinorder(aux) == 0)
+	{
+		ft_print("IT IS ALREADY IN ORDER", 1, 'x');
 		exit(1);
+	}
 }
