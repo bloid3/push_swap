@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   push_swap.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
+/*   By: papereir <papereir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/21 13:01:46 by marvin            #+#    #+#             */
-/*   Updated: 2023/12/19 13:45:09 by marvin           ###   ########.fr       */
+/*   Updated: 2023/12/21 13:19:54 by papereir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,7 @@
 # include <fcntl.h>
 # include <sys/types.h>
 # include "libft/libft.h"
+# include  <limits.h>
 
 
 void	ft_print(char *s, int opt, char ab);
@@ -30,6 +31,21 @@ void	checkall(t_list *aux);
 int		ft_isnumber(char *str);
 void	repeated(t_list *aux);
 int		isinorder(t_list *aux);
+t_list	*maxaddr(t_list *stack);
+t_list	*minaddr(t_list *stack);
+t_list	*findnextmin(t_list *stack, t_list *last_min);
+t_list	*ft_index(t_list **stacka, t_list **stackb);
+void	ft_free(char **numbers);
+int     findmin(t_list *stack);
+int	    indmax(t_list *stacka);
+void	swap(t_list **stack, char option);
+void	push(t_list **src, t_list **dest, char option);
+void	rotate(t_list **stack, char option);
+void	reverserotate(t_list **stack, char option);
 void	sortsmol(t_list **stackA, t_list **stackB);
+void	sortsmol3(t_list **stackA);
+void	sortsmol4(t_list **stackA, t_list **stackB);
+void	sortsmol5(t_list **stackA, t_list **stackB);
+
 
 #endif

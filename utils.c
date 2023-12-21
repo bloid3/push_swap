@@ -30,3 +30,44 @@ void	ft_print(char *s, int opt, char ab)
 		write(1, "\n", 1);
 	}
 }
+
+void	ft_free(char **numbers)
+{
+	int	i;
+
+	i = 0;
+	while (numbers[i])
+		free(numbers[i++]);
+	free(numbers);
+}
+
+int	findmin(t_list *stack)
+{
+	t_list	*min;
+	int		lon;
+
+	min = stack;
+	lon = ft_lstsize(stack);
+	while (lon != 0)
+	{
+		if (stack->content < min->content)
+			min = stack;
+		stack = stack->next;
+		lon --;
+	}
+	return ((*min).content);
+}
+
+int	findmax(t_list *stacka)
+{
+	t_list	*max;
+
+	max = stacka;
+	while (stacka)
+	{
+		if (stacka->idx > max->idx)
+			max = stacka;
+		stacka = stacka->next;
+	}
+	return (max->idx);
+}
